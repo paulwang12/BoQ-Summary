@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BoQ_Summary {
+namespace BoQApplication {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace BoQ_Summary {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("BoQ_Summary.InputDatas", typeof(InputDatas).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("BoQApplication.InputDatas", typeof(InputDatas).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -63,9 +63,9 @@ namespace BoQ_Summary {
         /// <summary>
         ///   查找 System.Byte[] 类型的本地化资源。
         /// </summary>
-        internal static byte[] LK {
+        internal static byte[] LKBOB {
             get {
-                object obj = ResourceManager.GetObject("LK", resourceCulture);
+                object obj = ResourceManager.GetObject("LKBOB", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -76,6 +76,16 @@ namespace BoQ_Summary {
         internal static byte[] LKDMX {
             get {
                 object obj = ResourceManager.GetObject("LKDMX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Byte[] 类型的本地化资源。
+        /// </summary>
+        internal static byte[] LKSQX {
+            get {
+                object obj = ResourceManager.GetObject("LKSQX", resourceCulture);
                 return ((byte[])(obj));
             }
         }

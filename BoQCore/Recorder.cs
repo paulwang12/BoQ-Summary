@@ -5,15 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 
-namespace BoQ_Summary
+namespace BoQCore
 {
-    
-    public static class Globals
+    public class Recorder
     {
-        public enum BeamType { F10, F15, T25, T35, B50, B60 }
-
-
-        public static void WriteRcd(ref DataTable alrcd,
+        public static void Write(ref DataTable alrcd,
             string BriName, string cla, string loc, string det, string mname, string spec,
             double Q1, double Q2, int xmh)
         {
@@ -24,12 +20,11 @@ namespace BoQ_Summary
             newRow["detial"] = det;
             newRow["name"] = mname;
             newRow["spec"] = spec;
-            newRow["quantity"] = Q1;
+            newRow["quantity1"] = Q1;
             newRow["quantity2"] = Q2;
             newRow["xmh"] = xmh;
             alrcd.Rows.Add(newRow);
         }
+
     }
-
-
 }

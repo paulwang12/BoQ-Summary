@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace BoQ_Summary.Inputs
+namespace BoQCore
 {
     public struct BPD
     {

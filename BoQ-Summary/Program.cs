@@ -1,18 +1,50 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BoQ_Summary.Inputs;
-namespace BoQ_Summary
+using BoQCore;
+using Configuration;
+
+namespace BoQApplication
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            SQX LK_SQX =new SQX("LK", InputDatas.LK);
+            // 准备输入数据
+            SQX LK_SQX = new SQX("LK", InputDatas.LKSQX);
             DMX LK_DMX = new DMX("LK", InputDatas.LKDMX);
-            var ff= LK_SQX.GetBG(148020.000);
+            GZX LK_GZX = new GZX("LK", InputDatas.LKBOB);
+
+            
+            // 调用配置器
+            //Configer Bill = new Configer("E763Config");
+            Configer Bill = new Configer("GeneralConfig");
+            Bill.ConfigInstance.BridgeList = LK_GZX;
+            Bill.ConfigInstance.Dmx = LK_DMX;
+            Bill.ConfigInstance.Sjx = LK_SQX;
+            //Bill.ConfigInstance.Record = AllRecord;
+            Bill.ConfigInstance.Run();
+
+
+
+
+
+
+            // 完成
+
+
+
+
+            Console.ReadKey();
         }
+
+
+
+
+
+
     }
 }

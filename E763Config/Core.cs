@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BoQ_Summary.Models
+namespace E763Config
 {
-    class CapBeam
+    abstract public class Core
     {
+
     }
 }
